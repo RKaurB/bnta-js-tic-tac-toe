@@ -1,15 +1,27 @@
 body {
     color: green;
-    font-family: "Comic Sans", san-serif;
+    font-family: "Comic Sans", sans-serif;
 }
 
-.game {
+section {
+    text-align: center;
+}
+
+#mygrid {
     text-align: center;
     display: grid;
     grid-template-columns: repeat(3, auto);
     width: 306px;
     margin: 50px auto;
 }
+
+/* #mygrid {
+    width: 500px;
+    height: 400px; */
+    /* Ensure all of the divs wrap over each other with no gaps */
+    /* display: flex;
+    flex-wrap: wrap;
+} */
 
 .cell {
     font-family: Monospace, san-serif;
