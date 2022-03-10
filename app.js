@@ -42,10 +42,20 @@ function handleNewGame(){
 
 }
 
+darkModeButton = document.getElementById("darkmode")
+
+darkModeButton.addEventListener("click", toggleDarkMode)
+
 function toggleDarkMode(){
-        const element = document.body;
-        element.classList.toggle(".darkmode");
-      }
+    document.body.classList.toggle("darkmode")
+
+    if (darkModeButton.innerText === "Dark Mode"){
+        darkModeButton.innerText = "Light Mode";
+    
+    } else{
+        darkModeButton.innerText = "Dark Mode"
+    }
+}
 
 
 // Add event listeners to the game cells and newgame button
@@ -162,4 +172,3 @@ function handleNewGame() {
     statusDisplay.innerHTML = currentPlayerTurn();
     document.querySelectorAll(".cell").forEach(cell => cell.innerHTML = "");
 }
-

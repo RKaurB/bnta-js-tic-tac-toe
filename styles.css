@@ -1,5 +1,6 @@
 body {
-    color: green;
+    color: #47624f;
+    background-color: #9ffcdf ;
     font-family: "Comic Sans", sans-serif;
     display: flex-wrap;
     text-align: center;
@@ -10,7 +11,7 @@ body {
 } */
 
 #game {
-    background-color: aqua;
+    /* background-color: aqua; */
     /* text-align: center; */
     display: flex;
 }
