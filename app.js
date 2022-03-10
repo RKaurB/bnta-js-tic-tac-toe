@@ -1,8 +1,8 @@
 // (will hold our game logic, and handle everything else we need)
 
 // Store game status element for use later on
-console.log(document.querySelector('.status--message'));
-const statusDisplay = document.querySelector('.status--message');
+console.log(document.querySelector('.game--status'));
+const statusDisplay = document.querySelector('.game--status');
 
 //gameActive to pause the game in an end scenario
 let gameActive = true;
@@ -37,14 +37,16 @@ function handleResultValidation() {
 function handleCellClick() {
 
 }
-function handleNewGame() {
+// function handleNewGame() {
     
-}
+// }
+
 
 // Add event listeners to the game cells and newgame button
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
-document.querySelector('.newgame').addEventListener('click', handleRestartGame);
+//document.querySelector('.button--newgame').addEventListener('click', handleNewGame);
 
+//document.querySelector('.game--restart').addEventListener('click', handleRestartGame);
 
 // eventHandlers
 
@@ -55,12 +57,12 @@ function handleCellClick(clickedCellEvent) {
         // Target is a property of the event. The target event property returns the element that triggered the event.
         // We need this to be a number so we need to convert the const clickedCell, from what it is now (a string id) to an integer of 0-8
 
-        constClickedCellIndex = parseInt(
+        const clickedCellIndex = parseInt(
             clickedCell.getAttribute('data-cell-index')
         );
 
 
-// If the cell at index i is NOT empty, or the game state is NOT active, we don't want to do anything. So return nothing? as in do nothing
+    // If the cell at index i is NOT empty, or the game state is NOT active, we don't want to do anything. So return nothing? as in do nothing
         if (gameState[clickedCellIndex] !== "" || !gameActive) {
             return;
         }
@@ -126,12 +128,12 @@ function handleResultValidation() {
     }
 
     // Check whether there are any blank space in our grid that player hasn't yet populated
-    let roundDraw = gameState.includes("");
+    let roundDraw = !gameState.includes("");
     // If current grid includes blank cell(s)
     if (roundDraw) {
         statusDisplay.innerHTML = drawMessage();
         // The game is still active
-        gameActive = true;
+        gameActive = false;
         return;
     }
     handlePlayerChange();
@@ -146,10 +148,10 @@ function handlePlayerChange() {
 
 // Set the game tracking variables back to their defaults, clear game board, 
 //      update game status message back to current player message
-function handleRestartGame() {
-    gameActive = true;
-    currentPlayer = "X";
-    gameState = ["", "", "", "","", "", "", "", ""];
-    statusDisplay.innerHTML = currentPlayerTurn();
-    document.querySelectorAll(".cell").forEach(cell.innerHTML = "");
-}
+// function handleNewGame() {
+//     gameActive = true;
+//     currentPlayer = "X";
+//     gameState = ["", "", "", "","", "", "", "", ""];
+//     statusDisplay.innerHTML = currentPlayerTurn();
+//     document.querySelectorAll(".cell").forEach(cell.innerHTML = "");
+// }

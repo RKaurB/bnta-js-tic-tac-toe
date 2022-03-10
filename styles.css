@@ -1,17 +1,14 @@
 body {
     color: green;
     font-family: "Comic Sans", sans-serif;
-    display: flex-wrap;
+}
+
+.game--status {
     text-align: center;
 }
 
-/* section {
+header {
     text-align: center;
-} */
-
-.game {
-    /* text-align: center; */
-    display: flex;
 }
 
 #mygrid {
@@ -39,5 +36,10 @@ body {
     cursor: pointer;
     line-height: 100px;
     font-size: 60px;
-    background-color: white;
+}
+
+.darkmode {
+    background-color: black;
+    color: light-green;
+    
 }
