@@ -42,10 +42,16 @@ function handleNewGame(){
 
 }
 
+function toggleDarkMode(){
+        const element = document.body;
+        element.classList.toggle(".darkmode");
+      }
+
 
 // Add event listeners to the game cells and newgame button
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
 document.querySelector('.button--newgame').addEventListener('click', handleNewGame);
+
 
 //document.querySelector('.game--restart').addEventListener('click', handleRestartGame);
 
@@ -156,3 +162,4 @@ function handleNewGame() {
     statusDisplay.innerHTML = currentPlayerTurn();
     document.querySelectorAll(".cell").forEach(cell => cell.innerHTML = "");
 }
+
