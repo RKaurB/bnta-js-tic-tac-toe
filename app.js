@@ -37,14 +37,15 @@ function handleResultValidation() {
 function handleCellClick() {
 
 }
-// function handleNewGame() {
-    
-// }
+
+function handleNewGame(){
+
+}
 
 
 // Add event listeners to the game cells and newgame button
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
-//document.querySelector('.button--newgame').addEventListener('click', handleNewGame);
+document.querySelector('.button--newgame').addEventListener('click', handleNewGame);
 
 //document.querySelector('.game--restart').addEventListener('click', handleRestartGame);
 
@@ -148,10 +149,10 @@ function handlePlayerChange() {
 
 // Set the game tracking variables back to their defaults, clear game board, 
 //      update game status message back to current player message
-// function handleNewGame() {
-//     gameActive = true;
-//     currentPlayer = "X";
-//     gameState = ["", "", "", "","", "", "", "", ""];
-//     statusDisplay.innerHTML = currentPlayerTurn();
-//     document.querySelectorAll(".cell").forEach(cell.innerHTML = "");
-// }
+function handleNewGame() {
+    gameActive = true;
+    currentPlayer = "X";
+    gameState = ["", "", "", "", "", "", "", "", ""];
+    statusDisplay.innerHTML = currentPlayerTurn();
+    document.querySelectorAll(".cell").forEach(cell => cell.innerHTML = "");
+}
