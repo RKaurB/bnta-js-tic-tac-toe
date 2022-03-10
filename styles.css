@@ -1,10 +1,17 @@
 body {
     color: green;
     font-family: "Comic Sans", sans-serif;
+    display: flex-wrap;
+    text-align: center;
 }
 
-section {
+/* section {
     text-align: center;
+} */
+
+.game {
+    /* text-align: center; */
+    display: flex;
 }
 
 #mygrid {
@@ -32,4 +39,5 @@ section {
     cursor: pointer;
     line-height: 100px;
     font-size: 60px;
+    background-color: white;
 }

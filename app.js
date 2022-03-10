@@ -1,7 +1,8 @@
 // (will hold our game logic, and handle everything else we need)
 
 // Store game status element for use later on
-const statusDisplay = document.querySelector('.game--status');
+console.log(document.querySelector('.status--message'));
+const statusDisplay = document.querySelector('.status--message');
 
 //gameActive to pause the game in an end scenario
 let gameActive = true;
@@ -123,4 +124,32 @@ function handleResultValidation() {
         gameActive = false;
         return;
     }
+
+    // Check whether there are any blank space in our grid that player hasn't yet populated
+    let roundDraw = gameState.includes("");
+    // If current grid includes blank cell(s)
+    if (roundDraw) {
+        statusDisplay.innerHTML = drawMessage();
+        // The game is still active
+        gameActive = true;
+        return;
+    }
+    handlePlayerChange();
+}
+
+// Change the current player and update game status message to indicate next player's turn
+function handlePlayerChange() {
+    // If the current turn is X then make it O, and if it's O then make it X  <-- using ternary operator
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    statusDisplay.innerHTML = currentPlayerTurn();
+}
+
+// Set the game tracking variables back to their defaults, clear game board, 
+//      update game status message back to current player message
+function handleRestartGame() {
+    gameActive = true;
+    currentPlayer = "X";
+    gameState = ["", "", "", "","", "", "", "", ""];
+    statusDisplay.innerHTML = currentPlayerTurn();
+    document.querySelectorAll(".cell").forEach(cell.innerHTML = "");
 }
