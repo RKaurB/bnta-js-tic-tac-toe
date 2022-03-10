@@ -5,9 +5,27 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
-        <script defer src="./app.js"></script>
+        <script src="./app.js"></script>
     </head>
     <body>
-    <header>Let's play!</header>
+        <header>Let's play!</header>
+        <main>
+            <section class="game">
+                <div id="mygrid"></div>
+                    <div data-cell-index="0" class="cell"></div>
+                    <div data-cell-index="1" class="cell"></div>
+                    <div data-cell-index="2" class="cell"></div>
+                    <div data-cell-index="3" class="cell"></div>
+                    <div data-cell-index="4" class="cell"></div>
+                    <div data-cell-index="5" class="cell"></div>
+                    <div data-cell-index="6" class="cell"></div>
+                    <div data-cell-index="7" class="cell"></div>
+                    <div data-cell-index="8" class="cell"></div>
+            </section>
+            <section class="game-status">
+                <div id="status--message"></div>
+                <button id="newgame">Start Again</button>
+            </section>
+        </main>
     </body>
 </html>
