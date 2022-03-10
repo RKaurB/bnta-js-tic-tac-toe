@@ -1,10 +1,17 @@
 body {
     color: green;
     font-family: "Comic Sans", sans-serif;
+    display: flex-wrap;
+    text-align: center;
 }
 
-.game--status {
+/* .game--status {
     text-align: center;
+} */
+
+.game {
+    /* text-align: center; */
+    display: flex;
 }
 
 header {
