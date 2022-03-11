@@ -7,6 +7,7 @@
         <link href="styles.css" rel="stylesheet">
     </head>
     <body>
+     <!-- //   <embed src="music.wav" loop="true" autostart="true" width="2" height="0"> -->
         <header>
             <div class="container">
                 <h1 class="neonText">Let's play!</h1>
@@ -30,11 +31,14 @@
             </header>
         <hr> 
         <main>
+            <div id="audio-controlbar">
+                <audio controls autoplay>
+                    <source src="music.wav" type="audio/wav" id="my_audio" loop="loop" autoplay="autoplay" muted="true">
+                    Your browser won't let us play the funky music
+                </audio>
+            </div>   
+
             <button id="darkmode">Dark Mode</button>
-
-            
-
-
             <section id="game">
 
                 <div id ="left--scoreboard">
@@ -44,7 +48,6 @@
                         <div id="player1--score">0</div></h3>
                     </section>
                 </div>
-
 
                 <div id="mygrid">
                     <div data-cell-index="0" class="cell"></div>

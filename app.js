@@ -213,3 +213,8 @@ function handleNewGame() {
     statusDisplay.innerHTML = currentPlayerTurn();
     document.querySelectorAll(".cell").forEach(cell => cell.innerHTML = "");
 }
+
+
+// window.onload=function playMusicOnLoad(){
+//     document.getElementById("my_audio").play();
+//   }
