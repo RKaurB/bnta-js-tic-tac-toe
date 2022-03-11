@@ -20,7 +20,7 @@ let gameState = ["", "", "", "","", "", "", "", ""];
 // Messages displayed during the game
 const winningMessage = () => `Player ${currentPlayer} has won`;
 const drawMessage = () => `Game ended in a draw!`;
-const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`;
+const currentPlayerTurn = () => `It's Player ${currentPlayer}'s turn`;
 
 // Initial message to let players know whose turn it is 
 statusDisplay.innerHTML = currentPlayerTurn();

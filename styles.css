@@ -1,9 +1,12 @@
 body {
     color: #47624f;
-    background-color: #9ffcdf ;
+    background-color: #83c5be;
     font-family: "Comic Sans", sans-serif;
     display: flex-wrap;
     text-align: center;
+    padding-top: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 hr {
@@ -40,6 +43,27 @@ h1 {
         text-shadow: none;
     }    
   }
+
+
+#left--side {
+    padding: 20px;
+    padding-top: 40px;
+    /* border: solid #47624f 3px; */
+    /* box-shadow: 0 0 10px 10px #0ff; */
+    box-shadow: 0 0 10px 10px #9ffcdf;
+    border-radius: 5%;
+    /* background-color: #9ffcdf; */
+}
+
+#right--side {
+    padding: 20px;
+    padding-top: 40px;
+    /* border: solid #47624f 3px; */
+    /* box-shadow: 0 0 10px 10px #0ff; */
+    box-shadow: 0 0 10px 10px #9ffcdf;
+    border-radius: 5%;
+    /* background-color: #9ffcdf; */
+}
 
 /* Marcy Edits */
 #player1--score {
