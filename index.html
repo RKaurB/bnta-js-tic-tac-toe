@@ -8,7 +8,10 @@
     </head>
     <body>
         <header>
-            <h1>Let's play!</h1>
+            <div class="container">
+                <h1 class="neonText">Let's play!</h1>
+            </div>
+            
         <section id="first--player" class="first--player">
                 <input type="text" placeholder="Player 1 Enter Name" id="firstText"><br>
                 <!-- aoife changed the id to be capitalised -->
@@ -28,7 +31,21 @@
         <hr> 
         <main>
             <button id="darkmode">Dark Mode</button>
+
+            
+
+
             <section id="game">
+
+                <div id ="left--scoreboard">
+                    <section id="left--side">
+                        <h2 id="player1">PLAYER X SCORE</h2>
+                        <h3>
+                        <div id="player1--score">0</div></h3>
+                    </section>
+                </div>
+
+
                 <div id="mygrid">
                     <div data-cell-index="0" class="cell"></div>
                     <div data-cell-index="1" class="cell"></div>
@@ -40,13 +57,28 @@
                     <div data-cell-index="7" class="cell"></div>
                     <div data-cell-index="8" class="cell"></div>
                 </div>
+                <div id ="right--scoreboard">
+                    <section id="right--side">
+                        <h2 id="player2">PLAYER O SCORE</h2>
+                        <h3><div id="player2--score">0</div></h3>
+                    </section>
+                </div>
+
+
+
             </section>
             <section class="game--status">
                 <div id="status--message">
                     <p>There is no message here</p>
                 </div>
             </section>
+
+            <section id="restart">
             <button class="button--newgame">Start Again</button>
+        </section>
+
+
+
         </main>
     </body>
     <script defer src="app.js"></script>

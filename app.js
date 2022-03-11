@@ -1,4 +1,8 @@
 // (will hold our game logic, and handle everything else we need)
+const player1score = document.querySelector("#player1--score");
+const player2score = document.querySelector("#player2--score");
+let player1wins=0;
+let player2wins=0;
 
 // Store game status element for use later on
 console.log(document.querySelector('.game--status'));
@@ -103,6 +107,7 @@ function handleCellPlayed(clickedCell, clickedCellIndex) {
     
     // Accept click event .target (currently clicked cell), and index of clicked cell
     gameState[clickedCellIndex] = currentPlayer;
+    // clickedCell.innerHTML = 'images/lm-cross-red';
     clickedCell.innerHTML = currentPlayer;  //we are using innerHTML here because we presumably want the html tags and spacing. We will try to change this later to innerText or innerContent and see what changes 
 }
 
@@ -120,6 +125,17 @@ const winningCombinations = [
     [0, 4, 8],
     [2, 4, 6]
 ];
+
+const updateScore = (player) => {
+    if (player == "X") {
+        player1score.innerText = ++player1wins;
+    }
+    if (player == "O") {
+        player2score.innerText = ++player2wins;
+    }
+}
+
+
 
 function handleResultValidation() {
 
@@ -148,6 +164,7 @@ function handleResultValidation() {
     // If the match is won declare the winner and end game
     if (roundWon) {
         statusDisplay.innerHTML = winningMessage();
+        updateScore(currentPlayer);
         gameActive = false;
         return;
     }
