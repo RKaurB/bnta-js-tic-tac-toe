@@ -90,6 +90,14 @@ h1 {
     font-family: 'Courier New', Courier, monospace;    
 }
 
+#submit_button:hover {
+    background: #79efbd
+}
+
+#submit_button:active{
+    background:#5fe8cb ;
+}
+
 /* Toggle Dark/Light button:  */
 #darkmode {
     border: 2px solid #47624f;
