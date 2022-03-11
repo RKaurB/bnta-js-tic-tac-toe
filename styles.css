@@ -55,6 +55,16 @@ h1 {
     align-items: flex-start;
 
 }
+#submit_button {
+    border: 2px solid #47624f;
+    margin-top: 30px;
+    flex-grow: 1;
+    background: #9ffcdf;
+    cursor: pointer;
+    color: #47624f;
+    font-size: 1.2em;
+    font-family: 'Courier New', Courier, monospace;    
+}
 
 /* Toggle Dark/Light button:  */
 #darkmode {
