@@ -4,7 +4,7 @@ body {
     font-family: "Comic Sans", sans-serif;
     display: flex-wrap;
     text-align: center;
-    padding-top: 15px;
+    /* padding-top: 5px; */
     padding-left: 50px;
     padding-right: 50px;
 }
@@ -19,7 +19,7 @@ hr {
     color: #fff;
 }
 h1 {
-    font-size: 2.2rem;    
+    font-size: 2.5rem;    
   }
   
   /* Flickering animation */
@@ -180,4 +180,12 @@ header {
 
 #restart{
     margin-top: 30px;
+}
+
+/* #status--message {
+    
+} */
+
+.game--status {
+    font-size: 25px;
 }
