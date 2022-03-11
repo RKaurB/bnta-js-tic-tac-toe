@@ -12,22 +12,6 @@
             <div class="container">
                 <h1 class="neonText">Let's play!</h1>
             </div>
-            
-        <section id="first--player" class="first--player">
-                <input type="text" placeholder="Player 1 Enter Name" id="firstText"><br>
-                <!-- aoife changed the id to be capitalised -->
-              </section>
-              <p></p>
-              <section id="second--player" class="second--player">
-                <input type="text" placeholder="Player 2 Enter Name" id="secondText">   
-                <!-- aoife changed the id to be capitalised -->
-                <br>
-              </section>
-              <br>
-              <section id="button">
-                  <button type="button" id="submit_button">Submit ></button>
-                  <!-- aoife changed second_button id to be submit_button to match the js and be specific -->
-              </section>
             </header>
         <hr> 
         <main>
@@ -43,6 +27,11 @@
 
                 <div id ="left--scoreboard">
                     <section id="left--side">
+                        <section id="first--player" class="first--player">
+                            <input type="text" placeholder="Player 1 Enter Name" id="firstText"></section>
+                            <section id="button">
+                                <button type="button" id="submit_button">Submit ></button>
+                            </section>
                         <h2 id="player1">PLAYER X SCORE</h2>
                         <h3>
                         <div id="player1--score">0</div></h3>
@@ -62,6 +51,12 @@
                 </div>
                 <div id ="right--scoreboard">
                     <section id="right--side">
+                        <section id="second--player" class="second--player">
+                            <input type="text" placeholder="Player 2 Enter Name" id="secondText">   
+                          </section>
+                          <section id="button">
+                            <button type="button" id="submit_button">Submit ></button>
+                        </section>
                         <h2 id="player2">PLAYER O SCORE</h2>
                         <h3><div id="player2--score">0</div></h3>
                     </section>
