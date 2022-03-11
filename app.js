@@ -24,6 +24,10 @@ statusDisplay.innerHTML = currentPlayerTurn();
 // These are all empty functions which we will use later on. If we initialise them here then we don't have the issue of initialising them in lower scopes and 
 // then having to import them to higher scopes
 
+function setPlayerNamesFromInput() {
+
+}
+
 function handleCellPlayed() {
 
 }
@@ -42,7 +46,10 @@ function handleNewGame(){
 
 }
 
-darkModeButton = document.getElementById("darkmode")
+
+
+
+const darkModeButton = document.getElementById("darkmode")
 
 darkModeButton.addEventListener("click", toggleDarkMode)
 
@@ -57,13 +64,14 @@ function toggleDarkMode(){
     }
 }
 
+// const submitPlayerNameButton = document.getElementById("#submit_button")
+
+//submitPlayerNameButton.addEventListener('click', setPlayerNames)
 
 // Add event listeners to the game cells and newgame button
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
 document.querySelector('.button--newgame').addEventListener('click', handleNewGame);
-
-
-//document.querySelector('.game--restart').addEventListener('click', handleRestartGame);
+document.querySelector("#submit_button").addEventListener('click', setPlayerNames);
 
 // eventHandlers
 
@@ -163,11 +171,27 @@ function handlePlayerChange() {
     statusDisplay.innerHTML = currentPlayerTurn();
 }
 
+//trying to get the game to take the player names as input 
+function setPlayerNames() {
+    // this should just change the placeholder "Player 1/2 Enter Name" to the value of whatever the input is 
+    let firstPlayerNameText = document.querySelector("#firstText");
+    let secondPlayerNameText =  document.querySelector("#secondText");
+
+
+    let firstPlayerValue = firstPlayerNameText.value;
+    let secondPlayerValue = secondPlayerNameText.value;
+
+    //just some checks 
+    console.log(firstPlayerValue);   //this is working and returning whatever we put in the player 1 box as a string
+    console.log(secondPlayerValue);  //this is working and returning whatever we put in the player 1 box as a string
+
+}
+
 // Set the game tracking variables back to their defaults, clear game board, 
 //      update game status message back to current player message
 function handleNewGame() {
     gameActive = true;
-    currentPlayer = "X";
+    currentPlayer = "X";  //this can stay the way it is because hopefully we are just changing the value of currentPlayer if the names are entered
     gameState = ["", "", "", "", "", "", "", "", ""];
     statusDisplay.innerHTML = currentPlayerTurn();
     document.querySelectorAll(".cell").forEach(cell => cell.innerHTML = "");
