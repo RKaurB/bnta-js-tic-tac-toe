@@ -17,11 +17,12 @@ Our team consisted of BNTA Cohort 4 members: [Abdi](https://github.com/Abdiqania
 ### Extensions we implemented:
 * To be able to restart the game without reloading the page
 * To keep track of how many games each player has won
+* Add dark mode toggle button
 * Add sound to the game
 
 ### Future extensions to implement:
 * Allow the player to enter their name instead of being "player 1" or "player 2"
-* Have an alternative to Xs and Os on the board - e.g. players' names/shapes/some other theme?
+* Have an alternative to Xs and Os on the board - e.g. players' names/shapes/some other theme
 * Abstract the game logic into a separate class and write unit tests for it
 * Let a single player play against the computer (advanced extension)
 
